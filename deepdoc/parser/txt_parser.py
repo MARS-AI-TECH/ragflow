@@ -61,7 +61,6 @@ class RAGFlowTxtParser:
         secs = re.split(r"(%s)" % dels, txt)
         for sec in secs:
             if re.match(f"^{dels}$", sec):
-                cks[-1] += sec
                 continue
             add_chunk(sec)
 
